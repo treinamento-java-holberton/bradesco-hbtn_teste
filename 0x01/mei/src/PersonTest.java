@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -12,7 +13,7 @@ public class PersonTest {
     public static final float DEFAULT_SALARY = 1200.0F;
     public static final float EXPECTED_YEARLY_SALARY = 14400.0F;
     private Person person;
-    private final Date birthdate = new GregorianCalendar(2000, 0, 1).getTime();
+    private final Date birthdate = new GregorianCalendar(2000, Calendar.JANUARY, 1).getTime();
 
     @BeforeEach
     public void setup() {
