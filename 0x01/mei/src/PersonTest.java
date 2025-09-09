@@ -5,8 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PersonTest {
 
@@ -31,6 +30,11 @@ public class PersonTest {
     @Test
     public void test_calculateYearlySalary() {
         assertEquals(EXPECTED_YEARLY_SALARY, person.calculateYearlySalary());
+    }
+
+    @Test
+    public void person_is_not_MEI() {
+        assertFalse(person.isMEI());
     }
 
     @Test
